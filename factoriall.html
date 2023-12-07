@@ -35,6 +35,7 @@
       border: 2px solid #3498db;
       border-radius: 5px;
       margin-bottom: 10px;
+      text-align: right; /* Right-align input */
     }
 
     button {
@@ -60,17 +61,16 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s;
+      text-align: left; /* Left-align results */
     }
 
     #results p {
-     font-size: 24px;
+      font-size: 24px;
       font-weight: bold;
       color: #27ae60;
     }
 
   </style>
-
-
 
 </head>
 <body>
@@ -118,12 +118,12 @@
       }
       var average = total / n;
 
-      // Display the results
+      // Display the results with right alignment for integer values and left alignment for others
       var resultsDiv = document.getElementById("results");
       resultsDiv.innerHTML = `
         <p>The ${n}th factorial is: ${factorial}</p>
         <p>The sum of the first ${n} numbers is: ${sum}</p>
-        <p>The average of the first ${n} numbers is: ${average}</p>
+        <p>The average of the first ${n} numbers is: ${average.toFixed(2)}</p>
       `;
     }
   </script>
